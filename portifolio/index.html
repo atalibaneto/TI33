@@ -25,10 +25,71 @@
                 <li><a href="#">Contato</a></li>
             </ul>
             </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Olá, meu nome é <span>John Doe</span></h1>
+            </div>
         </div>
     </div>
+    <!-- ------------ sobre ------------- -->
+    <div id="sobre">
+        <div class="container">
+            <div class="linha">
+                <div class="sobre-col-1">
+                    <img src="imagens/sobre.png">
+                </div>
+
+                <div class="sobre-col-2">
+                    <h1 class="subtitulo">Sobre</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor vestibulum quam, sed gravida nisl feugiat a. Praesent elementum hendrerit porta. Nam ut bibendum est. Nunc accumsan porttitor arcu. Curabitur eget imperdiet magna. Ut congue non nulla at feugiat. Sed pulvinar molestie fermentum. Ut sapien massa, mattis id mi eu, elementum auctor ipsum. Nulla a lorem eget arcu finibus rutrum. Donec sed tellus ut lorem accumsan tristique vitae in massa. Praesent nec feugiat odio. Etiam velit felis, congue porttitor dui eget, dapibus imperdiet sem. Fusce ut aliquam felis. Proin mattis mi a lacus finibus varius. Fusce urna massa, venenatis sit amet diam ac, consectetur consectetur est. Pellentesque luctus, diam eget tempus pharetra, ex nunc interdum ipsum, sit amet aliquam mauris eros sed diam.</p>
+                <div class="aba-titulos">
+                    <p class="aba-links link-ativo" onclick="abriraba('skills')">Skills</p>
+                    <p class="aba-links" onclick="abriraba('experiencia')">Experiência</p>
+                    <p class="aba-links" onclick="abriraba('formacao')">Formação</p>
+                </div>
+                <div class="aba-conteudos aba-ativa" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Desenvolvimento de Interfaces Web/APP</li>
+                        <li><span>Web Development</span><br>Desenvolvimento de Sites</li>
+                        <li><span>APP Development</span><br>Desenvolvimento de Apps para Android e iOS</li>
+                    </ul>
+                </div>
+                <div class="aba-conteudos" id="experiencia">
+                    <ul>
+                        <li><span>2021 - Até hoje</span><br>Professor Honorário no MIT</li>
+                        <li><span>2011 - 2021</span><br>CIO at IBM</li>
+                        <li><span>2004 - 2011</span><br>Desenvolvedor na Google Inc.</li>
+                </ul>
+                </div>
+                <div class="aba-conteudos" id="formacao">
+                    <ul>
+                        <li><span>2010</span><br>MBA no MIT</li>
+                        <li><span>2009</span><br>MBA em Harvard</li>
+                        <li><span>2003</span><br>Serviço Nacional de Aprendizagem Comercial (Senac) - Botucatu / SP</li>
+                </ul>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ---------------- serviços --------------- -->
 
 
+<script>
+    var abaLinks = document.getElementsByClassName("aba-links");
+    var abaConteudos = document.getElementsByClassName("aba-conteudos");
+        function abriraba(abaNome) {
+            for (abaLink of abaLinks) {
+                abaLink.classList.remove("link-ativo");
+            }
+            for (abaConteudo of abaConteudos) {
+                abaConteudo.classList.remove("aba-ativa");
+            }
+            event.currentTarget.classList.add("link-ativo");
+            document.getElementById(abaNome).classList.add("aba-ativa");
+        }
+</script>
 
 </body>
 </html>
