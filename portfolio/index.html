@@ -158,11 +158,12 @@
             </div>
             <div class="contato_direita">
                 <form name="submit-to-google-sheet">
-                    <input type="text" nome="Nome" placeholder="Digite seu nome" required>
-                    <input type="email" nome="E-mail" placeholder="Digite seu email" required>
+                    <input type="text" name="Nome" placeholder="Digite seu nome" required>
+                    <input type="email" name="E-mail" placeholder="Digite seu email" required>
                     <textarea name="Mensagem" rows="6" placeholder="Digite sua mensagem" required></textarea>
                     <button type="submit" class="botao botao2">Enviar</button>    
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
@@ -201,11 +202,18 @@
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbymFaQobCQzRNGNKFZxXwDk45Mn1OXhdYcdDJ0DIQHpC-0m1V5a0l0zGGvPJVUExoZw/exec'
     const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
   
     form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
+        .then(response => {
+            msg.innerHTML = "Enviado com sucesso!"
+            setTimeout(function() {
+                msg.innerHTML = ""
+            },1000)
+            form.reset()
+        })
         .catch(error => console.error('Error!', error.message))
     })
   </script>
