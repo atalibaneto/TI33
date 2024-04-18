@@ -6,6 +6,8 @@
     --bg-nave-Bar-claro: #a517ba;
     --bg-nave-Bar-escuro: #5f1782;
     --cor-branca: #fff;
+    --cor-traco-titulo: #7b1798;
+    --bg-cor-sobre: #f8f9fa;
 }
 body {
     font-family: sans-serif;
@@ -29,8 +31,93 @@ body {
 .navbar-nav li a {
     color: var(--cor-branca) !important;
     font-weight: 600;
+    float: right;
+    text-align: left;
 }
 .fa-bars {
     color: var(--cor-branca);
     font-size: 30px !important;
+}
+.navbar-toggler {
+    outline: none !important;
+}
+/* ------ banner -------- */
+#banner {
+    background-image: linear-gradient(to right, var(--bg-nave-Bar-claro), var(--bg-nave-Bar-escuro));
+    color: var(--cor-branca);
+    padding-top: 5%;
+}
+.titulo_promo {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100;
+}
+.botao_play {
+    width: 45px;
+    margin: 20px;
+}
+#banner a {
+    color: var(--cor-branca);
+    text-decoration: none;
+}
+/* ------------ serviços ----------- */
+#servicos {
+    padding: 80px 0;
+}
+.img-servicos {
+    width: 100px;
+    margin-top: 20px;
+}
+.servicos {
+    padding: 20px;
+}
+.servicos h4 {
+    padding: 5px;
+    margin-top: 25px;
+    text-transform: uppercase;
+}
+.titulo::before {
+    content: '';
+    background: var(--cor-traco-titulo);
+    height: 5px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform: translateY(63px);
+}
+.titulo::after {
+    content: '';
+    background: var(--cor-traco-titulo);
+    height: 10px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    display: block;
+    transform: translateY(8px);
+}
+#servicos .btn-primary {
+    box-shadow: none;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, var(--bg-nave-Bar-claro), var(--bg-nave-Bar-escuro));
+}
+/* -------- SOBRE -------- */
+#sobre {
+    background: var(--bg-cor-sobre);
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.sobre-titulo {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 8%;
+}
+#sobre ul {
+    margin-left: 20px;
+}
+#sobre ul li {
+    margin: 10px 0;
 }
