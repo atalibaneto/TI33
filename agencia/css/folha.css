@@ -2,12 +2,16 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 :root {
     --bg-nave-Bar-claro: #a517ba;
     --bg-nave-Bar-escuro: #5f1782;
     --cor-branca: #fff;
     --cor-traco-titulo: #7b1798;
     --bg-cor-sobre: #f8f9fa;
+    --vermelho-color: #ff004f;
 }
 body {
     font-family: sans-serif;
@@ -120,4 +124,82 @@ body {
 }
 #sobre ul li {
     margin: 10px 0;
+}
+/* -------- CLIENTES -------- */
+#clientes {
+    margin: 100px 0;
+}
+.clientes {
+    border-left: 4px solid var(--cor-traco-titulo);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.clientes img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+.cargo-cliente {
+    display: inline-block;
+    font-size: 12px;
+}
+/* ------------ REDES SOCIAIS -------------- */
+#social {
+    background: var(--bg-cor-sobre);
+    padding: 100px 0;
+}
+.social-ico img {
+    width: 60px;
+    transition: 0.5s;
+}
+.social-ico a:hover img {
+    transform: translateY(-10px);
+}
+/* ------------- RODAPE -------------- */
+#rodape {
+    background-image: linear-gradient(to right, var(--bg-nave-Bar-claro), var(--bg-nave-Bar-escuro));
+    color: var(--cor-branca);
+}
+.rodape-img {
+    width: 100%;
+}
+.rodape-caixa {
+    padding: 20px;
+}
+.rodape-caixa img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+.rodape-caixa .fa-solid {
+    margin-right: 8px;
+    font-size: 25px;
+    width: 25px;
+}
+.rodape-caixa .formulario {
+    box-shadow: none !important;
+    border: none;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 0;
+    margin-top: 25px;
+    max-width: 250px;
+}
+.rodape-caixa .btn-primary {
+    box-shadow: none !important;
+    border: none;
+    border-radius: 0;
+    margin-top: 20px;
+    background-image: linear-gradient(to right, var(--bg-nave-Bar-claro), var(--bg-nave-Bar-escuro));
+}
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background-image: linear-gradient(to right, var(--bg-nave-Bar-claro), var(--bg-nave-Bar-escuro));
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i {
+    color: var(--vermelho-color);
 }
